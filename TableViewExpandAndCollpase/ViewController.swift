@@ -42,6 +42,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource
         // Set the expand action closure
         cell.expandAction = { [weak self] in
             self?.toggleCellHeight(indexPath: indexPath)
+//            cell.statusaTableview.isHidden = true
             tableView.reloadRows(at: [indexPath], with: .automatic) // Reload the specific cell to update the button image
         }
         
@@ -58,6 +59,8 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource
                 
         // Set the cell's selected state based on collapsed state
         cell.setSelected(collapsedIndexPaths.contains(indexPath), animated: false)
+        
+  
         
         return cell
     }
@@ -107,11 +110,12 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource
         
         // Check if the cell is in the collapsedIndexPaths set
         if collapsedIndexPaths.contains(indexPath) {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellIdentifier", for: indexPath) as? ExpandCollapseTableViewCell
+//            cell?.statusaTableview.isHidden = true
 //            cell.bgLineView.isHidden = true
 //            cell.bgLineView.backgroundColor = UIColor.white
-            return 80
-           
-            
+            return 90
+
         }
         
         return 357

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D1D7C2C2A15E5300045C2A7 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D7C2A2A15E5300045C2A7 /* StatusTableViewCell.swift */; };
+		8D1D7C2D2A15E5300045C2A7 /* StatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D1D7C2B2A15E5300045C2A7 /* StatusTableViewCell.xib */; };
 		8DC93B8A2A120E2C00A5EB7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC93B892A120E2C00A5EB7B /* AppDelegate.swift */; };
 		8DC93B8C2A120E2C00A5EB7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC93B8B2A120E2C00A5EB7B /* SceneDelegate.swift */; };
 		8DC93B8E2A120E2C00A5EB7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC93B8D2A120E2C00A5EB7B /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D1D7C2A2A15E5300045C2A7 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
+		8D1D7C2B2A15E5300045C2A7 /* StatusTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusTableViewCell.xib; sourceTree = "<group>"; };
 		8DC93B862A120E2C00A5EB7B /* TableViewExpandAndCollpase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewExpandAndCollpase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC93B892A120E2C00A5EB7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DC93B8B2A120E2C00A5EB7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				8DC93B8F2A120E2C00A5EB7B /* Main.storyboard */,
 				8DC93B9D2A120E9800A5EB7B /* ExpandCollapseTableViewCell.swift */,
 				8DC93B9E2A120E9800A5EB7B /* ExpandCollapseTableViewCell.xib */,
+				8D1D7C2A2A15E5300045C2A7 /* StatusTableViewCell.swift */,
+				8D1D7C2B2A15E5300045C2A7 /* StatusTableViewCell.xib */,
 				8DC93B922A120E2F00A5EB7B /* Assets.xcassets */,
 				8DC93B942A120E2F00A5EB7B /* LaunchScreen.storyboard */,
 				8DC93B972A120E2F00A5EB7B /* Info.plist */,
@@ -132,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC93B962A120E2F00A5EB7B /* LaunchScreen.storyboard in Resources */,
+				8D1D7C2D2A15E5300045C2A7 /* StatusTableViewCell.xib in Resources */,
 				8DC93B932A120E2F00A5EB7B /* Assets.xcassets in Resources */,
 				8DC93BA02A120E9800A5EB7B /* ExpandCollapseTableViewCell.xib in Resources */,
 				8DC93B912A120E2C00A5EB7B /* Main.storyboard in Resources */,
@@ -146,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC93B8E2A120E2C00A5EB7B /* ViewController.swift in Sources */,
+				8D1D7C2C2A15E5300045C2A7 /* StatusTableViewCell.swift in Sources */,
 				8DC93B8A2A120E2C00A5EB7B /* AppDelegate.swift in Sources */,
 				8DC93B9F2A120E9800A5EB7B /* ExpandCollapseTableViewCell.swift in Sources */,
 				8DC93B8C2A120E2C00A5EB7B /* SceneDelegate.swift in Sources */,

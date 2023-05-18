@@ -9,6 +9,8 @@ import UIKit
 
 class ExpandCollapseTableViewCell: UITableViewCell {
     
+    let data = ["John","Emily","Unni"]
+    @IBOutlet weak var statusaTableview: UITableView!
     
     @IBOutlet weak var bgLineView: UIView!
     @IBOutlet weak var bgView: UIView!
@@ -27,6 +29,9 @@ class ExpandCollapseTableViewCell: UITableViewCell {
         bgView.layer.shadowOpacity = 0.5
         bgView.layer.shadowOffset = CGSize(width: 2, height: 2)
         bgView.layer.shadowRadius = 4
+        statusaTableview.register(UINib(nibName: "StatusTableViewCell", bundle: nil), forCellReuseIdentifier: "StatusTableViewCell")
+        
+        
     }
 
     
@@ -53,4 +58,22 @@ class ExpandCollapseTableViewCell: UITableViewCell {
 ////          contentView.backgroundColor = selected ? backgroundColor.withAlphaComponent(0.8) : backgroundColor
 //      }
 //
+}
+
+extension ExpandCollapseTableViewCell : UITableViewDelegate,UITableViewDataSource
+{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StatusTableViewCell", for: indexPath) as! StatusTableViewCell
+        cell.nameLbl.text = data[indexPath.row]
+        return cell
+    }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 0
+//    }
+
 }
