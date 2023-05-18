@@ -30,7 +30,8 @@ class ExpandCollapseTableViewCell: UITableViewCell {
         bgView.layer.shadowOffset = CGSize(width: 2, height: 2)
         bgView.layer.shadowRadius = 4
         statusaTableview.register(UINib(nibName: "StatusTableViewCell", bundle: nil), forCellReuseIdentifier: "StatusTableViewCell")
-        
+        // Set the contentInset property to adjust the spacing
+        statusaTableview.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: -5, right: 0)
         
     }
 
@@ -75,5 +76,10 @@ extension ExpandCollapseTableViewCell : UITableViewDelegate,UITableViewDataSourc
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        return 0
 //    }
-
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return CGFloat.leastNormalMagnitude
+//    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }
 }

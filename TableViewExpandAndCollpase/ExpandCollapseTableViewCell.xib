@@ -81,8 +81,8 @@
                                         <color key="textColor" red="0.26666666666666666" green="0.3411764705882353" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="73" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eN1-NV-Imx">
-                                        <rect key="frame" x="14" y="147.33333333333337" width="314" height="195.66666666666663"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eN1-NV-Imx">
+                                        <rect key="frame" x="14" y="160.33333333333337" width="314" height="182.66666666666663"/>
                                         <color key="backgroundColor" red="0.60392156860000001" green="0.60392156860000001" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="dataSource" destination="KGk-i7-Jjw" id="vF5-a6-XVu"/>
@@ -101,7 +101,7 @@
                                     <constraint firstItem="ESk-kr-SBH" firstAttribute="leading" secondItem="Eh9-MA-nuK" secondAttribute="leading" constant="41" id="ORn-2Z-98j"/>
                                     <constraint firstAttribute="trailing" secondItem="ESk-kr-SBH" secondAttribute="trailing" constant="78" id="Rbc-Fr-Mof"/>
                                     <constraint firstItem="gb2-mq-cca" firstAttribute="top" secondItem="Eh9-MA-nuK" secondAttribute="top" constant="23.666666666666668" id="S4M-FN-VBw"/>
-                                    <constraint firstItem="eN1-NV-Imx" firstAttribute="top" secondItem="ESk-kr-SBH" secondAttribute="bottom" constant="10.000000000000028" id="Shm-2n-QMe"/>
+                                    <constraint firstItem="eN1-NV-Imx" firstAttribute="top" secondItem="ESk-kr-SBH" secondAttribute="bottom" constant="23" id="Shm-2n-QMe"/>
                                     <constraint firstItem="DHa-r7-YK5" firstAttribute="top" secondItem="aMT-ti-Lbp" secondAttribute="bottom" constant="5" id="XMe-hb-Jmg"/>
                                     <constraint firstItem="DHa-r7-YK5" firstAttribute="leading" secondItem="Eh9-MA-nuK" secondAttribute="leading" constant="20" id="ZYB-2P-v7o"/>
                                     <constraint firstItem="T6R-t7-DSv" firstAttribute="leading" secondItem="Eh9-MA-nuK" secondAttribute="leading" constant="20" id="Zcr-vw-Hog"/>
