@@ -8,14 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-let data = ["John", "Emily", "Michael", "Sophia", "William"]    
-var isExpanded = false
-var isCollapsed = false
-var expandAction: (() -> Void)?
-var toggleAction: (() -> Void)?
-var expandedIndexPath: IndexPath? = nil
-var collapsedIndexPaths: Set<IndexPath> = []
-var initiallyCollapsedIndexPaths: Set<IndexPath> = [IndexPath(row: 0, section: 0)] // Set the initially collapsed cells here
+    let data = ["John", "Emily", "Michael", "Sophia", "William"]
+    var isExpanded = false
+    var isCollapsed = false
+    var expandAction: (() -> Void)?
+    var toggleAction: (() -> Void)?
+    var expandedIndexPath: IndexPath? = nil
+    var collapsedIndexPaths: Set<IndexPath> = []
+    var initiallyCollapsedIndexPaths: Set<IndexPath> = [IndexPath(row: 0, section: 0)] // Set the initially collapsed cells here
     @IBOutlet weak var statusHistoryTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +32,9 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellIdentifier", for: indexPath) as! ExpandCollapseTableViewCell
-            cell.nameLabel.text = data[indexPath.row]
-            // Set the expand action closure
-            cell.expandAction = { [weak self] in
+        cell.nameLabel.text = data[indexPath.row]
+        // Set the expand action closure
+        cell.expandAction = { [weak self] in
             self?.toggleCellHeight(indexPath: indexPath)
             // cell.statusaTableview.isHidden = true
             tableView.reloadRows(at: [indexPath], with: .automatic) // Reload the specific cell to update the button image
@@ -51,37 +51,37 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource
     }
     
     func toggleCellHeight(indexPath: IndexPath) {
-            let previouslyExpandedIndexPath = expandedIndexPath
-            
-            if expandedIndexPath == indexPath {
-                // Tapped on the expanded cell, collapse it
-                expandedIndexPath = nil
-                collapsedIndexPaths.insert(indexPath)
-            } else
-            {
-                // Tapped on a different cell or no previously expanded cell, update the expandedIndexPath
-                expandedIndexPath = indexPath
-                collapsedIndexPaths.remove(indexPath)
-            }
-            var indexPathsToReload: [IndexPath] = []
-            if let previousIndexPath = previouslyExpandedIndexPath
-            {
-                // Collapse the previously expanded cell
-                indexPathsToReload.append(previousIndexPath)
-            }
-            if let expandedIndexPath = expandedIndexPath
-            {
-                // Expand the newly tapped cell
-                indexPathsToReload.append(expandedIndexPath)
-            }
-            if !indexPathsToReload.isEmpty
-            {
-                statusHistoryTableView.reloadRows(at: indexPathsToReload, with: .automatic)
-            }
+        let previouslyExpandedIndexPath = expandedIndexPath
         
-            statusHistoryTableView.beginUpdates()
-            statusHistoryTableView.endUpdates()
+        if expandedIndexPath == indexPath {
+            // Tapped on the expanded cell, collapse it
+            expandedIndexPath = nil
+            collapsedIndexPaths.insert(indexPath)
+        } else
+        {
+            // Tapped on a different cell or no previously expanded cell, update the expandedIndexPath
+            expandedIndexPath = indexPath
+            collapsedIndexPaths.remove(indexPath)
         }
+        var indexPathsToReload: [IndexPath] = []
+        if let previousIndexPath = previouslyExpandedIndexPath
+        {
+            // Collapse the previously expanded cell
+            indexPathsToReload.append(previousIndexPath)
+        }
+        if let expandedIndexPath = expandedIndexPath
+        {
+            // Expand the newly tapped cell
+            indexPathsToReload.append(expandedIndexPath)
+        }
+        if !indexPathsToReload.isEmpty
+        {
+            statusHistoryTableView.reloadRows(at: indexPathsToReload, with: .automatic)
+        }
+        
+        statusHistoryTableView.beginUpdates()
+        statusHistoryTableView.endUpdates()
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if let expandedIndexPath = expandedIndexPath, expandedIndexPath == indexPath {
             return 380

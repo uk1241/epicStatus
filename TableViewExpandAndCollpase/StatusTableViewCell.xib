@@ -24,7 +24,7 @@
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="Group 2145" translatesAutoresizingMaskIntoConstraints="NO" id="JIv-Fd-gzh">
-                        <rect key="frame" x="35" y="5" width="20" height="20"/>
+                        <rect key="frame" x="35" y="-2" width="20" height="20"/>
                     </imageView>
                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path 1343 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="tYF-ZD-hJf">
                         <rect key="frame" x="20" y="9" width="1" height="85"/>
@@ -34,7 +34,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bibin (TLA)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFL-c5-HSP">
-                        <rect key="frame" x="62" y="5" width="73" height="17"/>
+                        <rect key="frame" x="62" y="-1" width="73" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.69411764705882351" green="0.74117647058823533" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -46,7 +46,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeT-Gd-5VT">
-                        <rect key="frame" x="62" y="40" width="28" height="28"/>
+                        <rect key="frame" x="62" y="34" width="28" height="28"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="28" id="HCd-ED-hQo"/>
                             <constraint firstAttribute="height" constant="28" id="gUf-Vw-h99"/>
@@ -55,7 +55,7 @@
                         <state key="normal" image="Group 2257"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C86-Ax-vy7">
-                        <rect key="frame" x="101" y="40" width="28" height="28"/>
+                        <rect key="frame" x="101" y="34" width="28" height="28"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="28" id="5qd-y0-ehd"/>
                             <constraint firstAttribute="height" constant="28" id="Lko-Yh-TIW"/>
@@ -69,7 +69,7 @@
                     <constraint firstItem="vbb-s4-LT8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="3nd-N3-FIn"/>
                     <constraint firstItem="zeT-Gd-5VT" firstAttribute="leading" secondItem="tYF-ZD-hJf" secondAttribute="trailing" constant="41" id="F2S-qQ-bwu"/>
                     <constraint firstItem="zeT-Gd-5VT" firstAttribute="top" secondItem="mFL-c5-HSP" secondAttribute="bottom" constant="18" id="JOU-Zh-XA4"/>
-                    <constraint firstItem="JIv-Fd-gzh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="SCY-va-A5r"/>
+                    <constraint firstItem="JIv-Fd-gzh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="-2" id="SCY-va-A5r"/>
                     <constraint firstItem="C86-Ax-vy7" firstAttribute="leading" secondItem="zeT-Gd-5VT" secondAttribute="trailing" constant="11" id="UxB-wW-z8P"/>
                     <constraint firstItem="mFL-c5-HSP" firstAttribute="leading" secondItem="JIv-Fd-gzh" secondAttribute="trailing" constant="7" id="V8z-yF-a0Y"/>
                     <constraint firstAttribute="bottom" secondItem="tYF-ZD-hJf" secondAttribute="bottom" constant="-5" id="Xwn-kH-5Tm"/>
@@ -79,7 +79,7 @@
                     <constraint firstItem="tYF-ZD-hJf" firstAttribute="top" secondItem="BAX-R8-mwe" secondAttribute="bottom" constant="-4" id="msA-Va-oLM"/>
                     <constraint firstItem="BAX-R8-mwe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wIb-fi-nsm"/>
                     <constraint firstItem="tYF-ZD-hJf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="wc9-3k-J0e"/>
-                    <constraint firstItem="mFL-c5-HSP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="wmq-GK-MAi"/>
+                    <constraint firstItem="mFL-c5-HSP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="-1" id="wmq-GK-MAi"/>
                     <constraint firstItem="JIv-Fd-gzh" firstAttribute="leading" secondItem="BAX-R8-mwe" secondAttribute="trailing" constant="8" id="won-Pg-8El"/>
                 </constraints>
             </tableViewCellContentView>

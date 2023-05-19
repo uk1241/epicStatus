@@ -63,17 +63,22 @@ extension ExpandCollapseTableViewCell: UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "StatusTableViewCell", for: indexPath) as! StatusTableViewCell
         cell.nameLbl.text = data[indexPath.row]
         
-        // Check if the current cell is in the selectedIndexPaths set
-        if selectedIndexPaths.contains(indexPath) {
-            cell.statusImageOne.image = UIImage(named: "Group 2142")
-            cell.statusPath.image = UIImage(named: "Path 1343")
-            cell.approveLabel.text = "Approved"
-        }
-        else
+        //Hides the status path image of last cell
+        if indexPath.row == data.count-1
         {
-            cell.statusImageOne.image = UIImage(named: "Group 2142 (1)")
-            cell.statusPath.image = UIImage(named: "Path 1343 (1)")
+            cell.statusPath.isHidden = true
         }
+            // Check if the current cell is in the selectedIndexPaths set
+            if selectedIndexPaths.contains(indexPath) {
+                cell.statusImageOne.image = UIImage(named: "Group 2142")
+                cell.statusPath.image = UIImage(named: "Path 1343")
+                cell.approveLabel.text = "Approved"
+            }
+            else
+            {
+                cell.statusImageOne.image = UIImage(named: "Group 2142 (1)")
+                cell.statusPath.image = UIImage(named: "Path 1343 (1)")
+            }
         
         return cell
     }
