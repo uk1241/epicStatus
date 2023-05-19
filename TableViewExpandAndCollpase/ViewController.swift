@@ -39,16 +39,15 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellIdentifier", for: indexPath) as! ExpandCollapseTableViewCell
         cell.nameLabel.text = data[indexPath.row]
         
-        // Set the expand action closure
-        cell.expandAction = { [weak self] in
+            // Set the expand action closure
+            cell.expandAction = { [weak self] in
             self?.toggleCellHeight(indexPath: indexPath)
-//            cell.statusaTableview.isHidden = true
+            // cell.statusaTableview.isHidden = true
             tableView.reloadRows(at: [indexPath], with: .automatic) // Reload the specific cell to update the button image
         }
         
         // Update the button image based on expand/collapse state
         let isExpanded = expandedIndexPath == indexPath
-        let isCollapsed = collapsedIndexPaths.contains(indexPath)
         let buttonImageName = isExpanded ? "next (1) (1)" : "next (1)"
         cell.toggleButtonOutlet.setImage(UIImage(named: buttonImageName), for: .normal)
         
@@ -105,23 +104,18 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellIdentifier", for: indexPath) as! ExpandCollapseTableViewCell
       
         if let expandedIndexPath = expandedIndexPath, expandedIndexPath == indexPath {
-            return 357
+            return 380
         }
         
         // Check if the cell is in the collapsedIndexPaths set
         if collapsedIndexPaths.contains(indexPath) {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellIdentifier", for: indexPath) as? ExpandCollapseTableViewCell
-//            cell?.statusaTableview.isHidden = true
-//            cell.bgLineView.isHidden = true
-//            cell.bgLineView.backgroundColor = UIColor.white
+
             return 90
 
         }
         
-        return 357
+        return 380
     }
-  
-        
 }
 
 

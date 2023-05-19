@@ -8,13 +8,15 @@
 import UIKit
 
 class StatusTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var statusImageOne: UIImageView!
+    @IBOutlet weak var statusPath: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         // Set the contentInset property to adjust the spacing
-  
+      
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
