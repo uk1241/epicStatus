@@ -85,6 +85,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="approveLabel" destination="vbb-s4-LT8" id="J8S-EE-wlF"/>
                 <outlet property="nameLbl" destination="mFL-c5-HSP" id="XMH-4z-kX0"/>
                 <outlet property="statusImageOne" destination="BAX-R8-mwe" id="IPp-In-bW9"/>
                 <outlet property="statusPath" destination="tYF-ZD-hJf" id="5wf-Vt-yjL"/>

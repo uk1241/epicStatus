@@ -12,6 +12,7 @@ class StatusTableViewCell: UITableViewCell {
     @IBOutlet weak var statusImageOne: UIImageView!
     @IBOutlet weak var statusPath: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var approveLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

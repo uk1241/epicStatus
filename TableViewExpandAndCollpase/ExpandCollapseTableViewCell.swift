@@ -38,32 +38,26 @@ class ExpandCollapseTableViewCell: UITableViewCell {
         // Initialize selectedCells array
         selectedCells = Array(repeating: false, count: data.count)
     }
-
-    
-    
-    override func layoutSubviews() {
+    override func layoutSubviews()
+    {
            super.layoutSubviews()
-           
            // Update shadow path to match cell's frame
            layer.shadowPath = UIBezierPath(rect: bounds).cgPath
  }
-    
-
-    @IBAction func toggleButtonAction(_ sender: UIButton) {
-
+     @IBAction func toggleButtonAction(_ sender: UIButton)
+    {
         isExpanded.toggle()
         expandAction?()
         
     }
     
 }
-
 extension ExpandCollapseTableViewCell: UITableViewDelegate, UITableViewDataSource {
     // Returns the number of rows in the table view section
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         return data.count
     }
-    
     // Configures and returns a table view cell for the corresponding index path
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StatusTableViewCell", for: indexPath) as! StatusTableViewCell
@@ -73,7 +67,10 @@ extension ExpandCollapseTableViewCell: UITableViewDelegate, UITableViewDataSourc
         if selectedIndexPaths.contains(indexPath) {
             cell.statusImageOne.image = UIImage(named: "Group 2142")
             cell.statusPath.image = UIImage(named: "Path 1343")
-        } else {
+            cell.approveLabel.text = "Approved"
+        }
+        else
+        {
             cell.statusImageOne.image = UIImage(named: "Group 2142 (1)")
             cell.statusPath.image = UIImage(named: "Path 1343 (1)")
         }
@@ -86,14 +83,12 @@ extension ExpandCollapseTableViewCell: UITableViewDelegate, UITableViewDataSourc
         guard let cell = tableView.cellForRow(at: indexPath) as? StatusTableViewCell else {
             return
         }
-        
         // Add the selected index path to the selectedIndexPaths set
         selectedIndexPaths.insert(indexPath)
-        
         // Update the cell's images to indicate selection
         cell.statusImageOne.image = UIImage(named: "Group 2142")
         cell.statusPath.image = UIImage(named: "Path 1343")
-        
+        cell.approveLabel.text = "Approved"
         print("Tapped")
     }
 
@@ -102,17 +97,18 @@ extension ExpandCollapseTableViewCell: UITableViewDelegate, UITableViewDataSourc
         guard let cell = tableView.cellForRow(at: indexPath) as? StatusTableViewCell else {
             return
         }
-        
         // Remove the deselected index path from the selectedIndexPaths set
         selectedIndexPaths.remove(indexPath)
-        
         // Update the cell's images to indicate deselection if it's not selected anymore
         if selectedIndexPaths.contains(indexPath) {
             cell.statusImageOne.image = UIImage(named: "Group 2142 (1)")
             cell.statusPath.image = UIImage(named: "Path 1343 (1)")
-        } else {
+        }
+        else
+        {
             cell.statusImageOne.image = UIImage(named: "Group 2142")
             cell.statusPath.image = UIImage(named: "Path 1343")
+            cell.approveLabel.text = "Approved"
         }
         
         print("Deselected")
