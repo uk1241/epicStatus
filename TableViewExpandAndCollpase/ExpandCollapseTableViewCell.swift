@@ -21,7 +21,7 @@ class ExpandCollapseTableViewCell: UITableViewCell {
     var expandedIndexPath: IndexPath? = nil
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var toggleButtonOutlet: UIButton!
-
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,11 +40,11 @@ class ExpandCollapseTableViewCell: UITableViewCell {
     }
     override func layoutSubviews()
     {
-           super.layoutSubviews()
-           // Update shadow path to match cell's frame
-           layer.shadowPath = UIBezierPath(rect: bounds).cgPath
- }
-     @IBAction func toggleButtonAction(_ sender: UIButton)
+        super.layoutSubviews()
+        // Update shadow path to match cell's frame
+        layer.shadowPath = UIBezierPath(rect: bounds).cgPath
+    }
+    @IBAction func toggleButtonAction(_ sender: UIButton)
     {
         isExpanded.toggle()
         expandAction?()
@@ -77,7 +77,7 @@ extension ExpandCollapseTableViewCell: UITableViewDelegate, UITableViewDataSourc
         
         return cell
     }
-
+    
     // Handles the selection of a table view cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? StatusTableViewCell else {
@@ -91,7 +91,7 @@ extension ExpandCollapseTableViewCell: UITableViewDelegate, UITableViewDataSourc
         cell.approveLabel.text = "Approved"
         print("Tapped")
     }
-
+    
     // Handles the deselection of a table view cell
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? StatusTableViewCell else {
