@@ -9,7 +9,7 @@ import UIKit
 
 class ExpandCollapseTableViewCell: UITableViewCell {
     
-    let data = ["John","Emily","Unni"]
+    let data = ["John","Emily","Unni","Emily"]
     var selectedCells: [Bool] = []
     var selectedIndexPaths = Set<IndexPath>()
     var lastSelectedIndexPath: IndexPath?
@@ -73,12 +73,13 @@ extension ExpandCollapseTableViewCell: UITableViewDelegate, UITableViewDataSourc
                 cell.statusImageOne.image = UIImage(named: "Group 2142")
                 cell.statusPath.image = UIImage(named: "Path 1343")
                 cell.approveLabel.text = "Approved"
+                cell.sizeToFit()
             }
             else
             {
                 cell.statusImageOne.image = UIImage(named: "Group 2142 (1)")
                 cell.statusPath.image = UIImage(named: "Path 1343 (1)")
-            }
+                cell.sizeToFit()            }
         
         return cell
     }

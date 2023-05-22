@@ -83,15 +83,15 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource
         statusHistoryTableView.endUpdates()
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if let expandedIndexPath = expandedIndexPath, expandedIndexPath == indexPath {
+            if let expandedIndexPath = expandedIndexPath, expandedIndexPath == indexPath {
+                return 380
+            }
+            // Check if the cell is in the collapsedIndexPaths set
+            if collapsedIndexPaths.contains(indexPath) {
+                return 85
+            }
             return 380
         }
-        // Check if the cell is in the collapsedIndexPaths set
-        if collapsedIndexPaths.contains(indexPath) {
-            return 90
-        }
-        return 380
-    }
 }
 // Extension to create a UIColor instance from a hexadecimal color code.
 extension UIColor {
