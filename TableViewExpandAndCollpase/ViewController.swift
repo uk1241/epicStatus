@@ -35,9 +35,9 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource
         cell.nameLabel.text = data[indexPath.row]
         // Set the expand action closure
         cell.expandAction = { [weak self] in
-            self?.toggleCellHeight(indexPath: indexPath)
-            // cell.statusaTableview.isHidden = true
-            tableView.reloadRows(at: [indexPath], with: .automatic) // Reload the specific cell to update the button image
+        self?.toggleCellHeight(indexPath: indexPath)
+        // cell.statusaTableview.isHidden = true
+        tableView.reloadRows(at: [indexPath], with: .automatic) // Reload the specific cell to update the button image
         }
         // Update the button image based on expand/collapse state
         let isExpanded = expandedIndexPath == indexPath
@@ -84,19 +84,13 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             if let expandedIndexPath = expandedIndexPath, expandedIndexPath == indexPath {
-                return 380
+                return 70*5+70
             }
             // Check if the cell is in the collapsedIndexPaths set
             if collapsedIndexPaths.contains(indexPath) {
                 return 85
             }
-            return 380
-        // Calculate the total height of all the rows in the inner table view.
-//        let totalHeight = innerTableView.contentSize.height
-
-        // Set the height of the outer table view to the total height.
-//        outerTableView.rowHeight = totalHeight
-
+            return 70*5+70
         }
 }
 // Extension to create a UIColor instance from a hexadecimal color code.

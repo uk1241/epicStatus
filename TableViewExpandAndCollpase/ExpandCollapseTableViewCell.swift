@@ -9,6 +9,8 @@ import UIKit
 
 class ExpandCollapseTableViewCell: UITableViewCell {
     
+    
+    @IBOutlet weak var profileImageButton: UIButton!
     let data = ["John","Emily","Unni","Emily"]
     var selectedCells: [Bool] = []
     var selectedIndexPaths = Set<IndexPath>()
@@ -26,7 +28,7 @@ class ExpandCollapseTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Set shadow properties
-        bgView.layer.shadowColor = UIColor(hex: "#0458AD26").cgColor
+        bgView.layer.shadowColor = UIColor(hex: "#13ACF3").cgColor
         bgView.layer.shadowOpacity = 0.5
         bgView.layer.shadowOffset = CGSize(width: 2, height: 2)
         bgView.layer.shadowRadius = 4
