@@ -91,6 +91,12 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource
                 return 85
             }
             return 380
+        // Calculate the total height of all the rows in the inner table view.
+//        let totalHeight = innerTableView.contentSize.height
+
+        // Set the height of the outer table view to the total height.
+//        outerTableView.rowHeight = totalHeight
+
         }
 }
 // Extension to create a UIColor instance from a hexadecimal color code.
